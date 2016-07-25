@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 	<title>DatePicker</title>
-	<head>
-	<link rel="stylesheet" type="text/css" href="DatePicker.css">	
-	</head>
-	<body>
-		<div id="ID_Ext_Container">
-			<div id ="ID_Inner_Top_Container"></div>	
-			<div id ="ID_Inner_Mid_Container"></div>	
-			<div id ="ID_Inner_Bottom_Container"></div>	
+<head>
+	<link rel="stylesheet" type="text/css" href="DatePicker.css"></head>
+<body>
+	<div id="ID_Ext_Container">
+		<div id ="ID_Inner_Top_Container">
+			<span id = "ID_Prev_Year"><img src="./arrow_left.png"/></span><!--
+			--><select id="ID_Year_Opt">
+				<option value="2016年">2016年</option>
+				<option value="2015年">2015年</option>
+			</select>
+			<span id = "ID_Next_Year">n</span>
+
+			<select id="ID_Month_Opt">
+				<option value="01月">01月</option>
+				<option value="02月">02月</option>
+			</select>
 		</div>
-	</body>
+		<div id ="ID_Inner_Mid_Container"></div>
+		<div id ="ID_Inner_Bottom_Container"></div>
+	</div>
+</body>
 </html>
