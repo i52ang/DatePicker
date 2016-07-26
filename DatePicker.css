@@ -17,17 +17,16 @@
 {
 	height: 25px;
 	margin-top: 3px;
-	line-height: 25px;
 }
 #ID_Inner_Mid_Container{
 	height: 150px;
 	margin-bottom: 3px;
 	margin-top: 3px;
+
 }
 #ID_Year_Opt
 {
-	background: red;
-	width: 100px;
+	width: 80px;
 	margin-left: 0px;
 	margin-top: 0px;
 }
@@ -44,14 +43,17 @@ span{
 	padding:0;
 	width: 20px;
 }
-
-#ID_Prev_Year{
-	display: inline-block;	
-	height: 18px;
-	margin-top: 2px;
+button{
+	height:16px;
+	border:0;
+	margin:0;
+	outline: 0;
 }
-
-#ID_Prev_Year img{
-	height: 16px;
-	//background: red;
+#ID_Prev_Year {
+	background-image: url("./icon/triangle_left.png");
+	background-position: center;
+}
+#ID_Next_Year{
+	background-image: url("./icon/triangle_right.png");
+	background-position: center;
 }
