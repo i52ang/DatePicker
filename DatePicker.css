@@ -50,10 +50,21 @@ button{
 	outline: 0;
 }
 #ID_Prev_Year {
+	margin-left: 10px;
 	background-image: url("./icon/triangle_left.png");
 	background-position: center;
 }
 #ID_Next_Year{
+	background-image: url("./icon/triangle_right.png");
+	background-position: center;
+}
+
+#ID_Prev_Month{
+	background-image: url("./icon/triangle_left.png");
+	background-position: center;
+}
+
+#ID_Next_Month{
 	background-image: url("./icon/triangle_right.png");
 	background-position: center;
 }
