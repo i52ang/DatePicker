@@ -2,7 +2,7 @@
 {
 	position:absolute;
 	width: 234px;
-	height: 220px;
+	height: 225px;
 	left:575px;
 	top:100px;
 	border: solid blue 0.5px;
@@ -19,7 +19,7 @@
 	margin-top: 3px;
 }
 #ID_Inner_Mid_Container{
-	height: 150px;
+	height: 155px;
 	margin-bottom: 3px;
 	margin-top: 3px;
 
@@ -67,4 +67,13 @@ button{
 #ID_Next_Month{
 	background-image: url("./icon/triangle_right.png");
 	background-position: center;
+}
+
+table{
+	style="width:100%";
+}
+
+th{
+	font-family: "Times New Roman", Times, serif;
+	font-size: 16px;
 }
