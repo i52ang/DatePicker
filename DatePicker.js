@@ -21,19 +21,21 @@ btnPrevMonth.onclick = function()
 {
 	if ( dropDownListMonth.selectedIndex > 0)
 		dropDownListMonth.selectedIndex--;
-	console.log("month_idx:"+dropDownListMonth.selectedIndex.toString());
+	updateDays();
 }
 
 btnNextMonth.onclick = function(){
 	if (dropDownListMonth.selectedIndex < 11)
 		dropDownListMonth.selectedIndex++;
-	console.log("month_idx:"+dropDownListMonth.selectedIndex.toString());
-
+	updateDays();
 }
 dropDownListYear.onchange = function() {
 	dropDownListYear_Select_Change();
 }
 
+dropDownListMonth.onchange = function(){
+	updateDays();
+}
 function dropDownListYear_Select_Change() {
 	g_DropDownList_BaseYear = get_year_num(dropDownListYear.value);
 	console.log("base_year:" + g_DropDownList_BaseYear.toString() + "\n");
@@ -59,6 +61,12 @@ function get_year_num(text_year)
 {
 	var end_pos =  text_year.indexOf("年");
 	return parseInt(text_year.substr(0,end_pos));
+}
+
+function get_month_num(text_month)
+{
+	var end_pos =  text_month.indexOf("月");
+	return parseInt(text_month.substr(0,end_pos));
 }
 
 function update_dropDownListYear() {
@@ -98,6 +106,15 @@ function init_months()
 		option.text = padNum(i,2) + "月";
 		dropDownListMonth.add(option,i-1);
 	}
+}
+
+function updateDays()
+{
+	var curr_date = new Date();
+	curr_date.setFullYear(get_year_num(dropDownListYear.value));
+	curr_date.setMonth(get_month_num(dropDownListMonth.value)-1);
+	curr_date.setDate(1);		
+	console.log(curr_date.toLocaleString());
 }
 
 function init() {
