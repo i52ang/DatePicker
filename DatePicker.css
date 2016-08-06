@@ -48,6 +48,7 @@ button{
 	border:0;
 	margin:0;
 	outline: 0;
+	cursor: pointer;
 }
 #ID_Prev_Year {
 	margin-left: 10px;
