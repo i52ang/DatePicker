@@ -139,6 +139,29 @@ function lastDayOfMonth(year,month)
 	return date.getDate();
 }
 
+function onTableCellClick(cell){
+	console.log(cell.innerHTML);
+}
+
+function registerTableCellClick() {
+	var row_idx = 1;
+	var cell_idx = 0;
+
+	var row ;
+	var cell;	
+	for ( row_idx = 1; row_idx < 7; row_idx++)
+	{
+		row = g_DayTable.rows[row_idx];
+		for (cell_idx = 0 ; cell_idx < 7 ; cell_idx++)
+		{
+				cell = row.cells[cell_idx];
+				cell.onclick = function(){
+					onTableCellClick(this);
+				}
+		}
+	}
+}
+
 function update_table_cell(begin_cell_idx,last_day_of_cur_month,last_day_of_pre_month)
 {
 	var day_idx = 1;
@@ -161,7 +184,7 @@ function update_table_cell(begin_cell_idx,last_day_of_cur_month,last_day_of_pre_
 				cell.innerHTML = (last_day_of_pre_month 
 					- begin_cell_idx +1+ cell_idx).toString();
 				if (out_of_curr_month) {
-					cell.style.background = "Gray";
+					cell.style.background = "MediumTurquoise";
 					cell.style.color = "black";
 				} else {
 					cell.style.color = "red";
@@ -180,7 +203,7 @@ function update_table_cell(begin_cell_idx,last_day_of_cur_month,last_day_of_pre_
 			cell.innerHTML = (day_idx).toString();
 			if ( out_of_curr_month)
 			{
-				cell.style.background = "Gray";
+				cell.style.background = "LightGreen";
 				cell.style.color = "black";
 			}	
 			else
@@ -218,5 +241,7 @@ function init() {
 	g_DropDownList_BaseYear = date.getFullYear();
 	update_dropDownListYear();
 	init_months();
+	dropDownListMonth.selectedIndex = date.getMonth();
 	updateDays();
+	registerTableCellClick();
 }
